@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/owl.carousel.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+      body{
+      font-family: "Montserrat", sans-serif;
+      }
+      img{
+        max-width: 100%;
+      }
+      header nav{
+        transition: .3s;
+      }
+      header a{
+
+        text-decoration: none;
+      }
+      .nav-light{
+        background-color: #fff;
+      }
+      .nav-dark a{
+        color:#fff;
+      }
+      header .bi{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:40px;
+        height:40px;
+        
+      }
+      .nav-light a{
+        color:#000;
+      }
+      .btn:hover{
+        transform:scale(1.04);
+        transition: .3s;
+      }
+      .owl-carousel .owl-dots{
+        display:flex;
+        justify-content: center;
+      }
+      .owl-carousel button.owl-dot.active{
+        width:40px;
+        height:40px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border:1px solid var(--bs-primary);
+        border-radius: 100%;
+      }
+      .owl-carousel button.owl-dot span {
+          margin: 3px 10px;
+          width: 5px;
+          height: 5px;
+          display: inline-block;
+          background-color:var(--bs-dark);
+          border-radius: 100%;
+      }
+      .award-item img{
+      max-width:40px;
+      }
+      .testimonial{
+        background-size: cover;
+      }
+      .process-step .title:after{
+        content:" ";
+        display:block;
+        width:50%;
+        max-width:300px;
+        margin:10px auto 0 auto;
+        height:1px;
+        background-color: var(--bs-dark);
+      }
+      .process-step img{
+        max-width:40px;
+      }
+      .process-step.step-dark .title:after{
+        background-color: var(--bs-light);
+      }
+      .project-item{
+        position: relative;
+      }
+      .project-item .image{
+        overflow: hidden;
+      }
+      .project-item .image img{
+          -o-object-fit: cover;
+          object-fit: cover;
+          height: 370px !important;
+      }
+      .project-item .content{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color:rgba(0,0,0,.2);
+        transform: .3s;
+      }
+      .project-item .content a{
+        font-size:5rem;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        font-weight: bold;
+        opacity: 0;
+        transition: .3s;
+        color:#fff;
+      }
+      .project-item:hover .content{
+        cursor: pointer;
+        background-color:rgba(0,0,0,.4);
+      }
+      .project-item:hover .content a{
+        opacity: 1;
+      }
+      
+        .leadForm .subtitle{
+          color:#000;
+        }
+      @media screen and (max-width:768px){
+        .leadForm form{
+          background: hsla(0, 0%, 100%, .3);
+          box-shadow: 0 8px 20px #00000029;
+          border-radius: 12px;
+          opacity: 1;
+          backdrop-filter: blur(4px);
+          -webkit-backdrop-filter: blur(4px);
+        }
+        .leadForm .subtitle{
+          background-color: var(--bs-dark);
+          color:#fff;
+          padding:15px 15px;
+          border-bottom-right-radius: 1rem;
+          border-bottom-left-radius: 1rem;
+          font-size:1rem;
+          box-shadow: 0 8px 20px #00000029;
+          margin:-1rem -1rem 0 -1rem;
+        }
+      }
+      @media screen and (min-width:768px){
+        .leadForm .title{
+          color:#fff;
+        }
+        .leadForm .subtitle{
+          color:#fff;
+        }
+        .leadForm{
+          position:absolute;
+          left:20px;
+          top:100px;
+          width:100%;
+          max-width:550px;
+          background:rgba(0,0,0,.8);
+          max-height:800px;
+          overflow:auto;
+          z-index:99;
+        }
+        .leadForm form{
+          background-color:rgba(255,255,255,0.5)
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./dist/images/logo.png" style="max-height:40px"/>
+          </a>
+          <div class="" >
+            <div class="d-flex ms-auto" role="search">
+              <a href="" class="d-flex align-items-center lead fw-bold header-cta">
+                <i class="bi bi-envelope-fill bg-primary rounded-circle text-dark me-2"></i>
+                (+91) 9812345678
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <Image 
+              src="./dist/images/banner-1.jpg"
+              class="d-block w-100" 
+              alt="Slide 1"
+              />
+          </div>
+          <div class="carousel-item">
+            <Image 
+              src="./dist/images/banner-2.jpg"
+              class="d-block w-100" 
+              alt="Slide 1"
+              />
+          </div>
+          <div class="carousel-item">
+            <Image 
+              src="./dist/images/banner-3.jpg"
+              class="d-block w-100" 
+              alt="Slide 1"
+              />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </section>
+    <section class="leadForm py-4 px-4 rounded-2">
+      <div class="header mb-3">
+        <h1 class="h text-center title d-none d-md-block">Design Your Next Commercial Space With The Most Trusted Interior Design Firm</h1>
+        <a href="https://api.whatsapp.com" data-bs-target="#contactUs" data-bs-toggle="modal" class="bg-primary d-none d-md-block w-100 btn text-uppercase py-3">Request a Callback</a>
+      </div>
+      <form class="py-3 px-3  rounded-2">
+        <h2 class="h3  mb-4 text-center subtitle">Connect With Our Designer To Get Started</h2>
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <div class="mb-3">
+              <input type="text" class="input-text form-control form-control-sm py-3 px-4 rounded-5" placeholder="Your Full Name"/>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="input-group mb-3 bg-white rounded-5 overflow-hidden"> 
+              <span class="input-group-text px-3 small" id="basic-addon1">+91</span>
+              <input type="text" class="form-control input-number form-control-sm py-3 px-3 rounded-0" placeholder="Contact No." aria-label="Username" aria-describedby="basic-addon1"/>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <input type="email" class="input-email form-control form-control-sm py-3 px-4 rounded-5" placeholder="Your Official Email"/>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="mb-3">
+              <textarea class="input-email form-control form-control-sm py-3 px-4 rounded-5" rows="5" placeholder="Your Message"></textarea>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg px-4 py-3 d-block w-100 rounded-5">Send</button>
+      </form>
+    </section>
+    <section class="py-5 key-highlight">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-3 pb-4">
+            <div class="counterItem text-center">
+              <div class="counter h1 fw-bold">50,000</div>
+              <div class="small">Happy Customers</div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 pb-4">
+            <div class="counterItem text-center">
+              <div class="counter h1 fw-bold">200,000</div>
+              <div class="small">Interior Products To Choose From</div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 pb-4">
+            <div class="counterItem text-center">
+              <div class="counter h1 fw-bold">6,000,000Sq. ft.</div>
+              <div class="small">Space Delivered Through Space Planning, Design & Build</div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-3 pb-4">
+            <div class="counterItem text-center">
+              <div class="counter h1 fw-bold">Pan India</div>
+              <div class="small">Presence</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="why-us">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="owl-carousel whyUsCarousel">
+              <div class="item">
+                <img src="./dist/images/why-01.png"/>
+              </div>
+              <div class="item">
+                <img src="./dist/images/why-02.png"/>
+              </div>
+              <div class="item">
+                <img src="./dist/images/why-03.png"/>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 py-5 ">
+            <div class="display-6 mb-3 mb-md-5 pt-md-5 fw-bold">Why Us?</div>
+            <p class="lead">Redefining Interior Design and Build through technology. Our endeavor is to put the joy back into the design and build process by driving customer delight in every step which is only possible through a bespoke tech-suite combined with category defining processes and benchmarks.</p>
+            <ul class="lead mb-4">
+              <li>Optimum Space Planning</li>
+              <li>Bespoke Tech enabled designs</li>
+              <li>Immersive Virtual 3D Walkthroughs</li>
+              <li>One stop portal of High Quality Products</li>
+              <li>Single Point Project Management</li>
+            </ul>
+            <button class="btn btn-primary py-3 px-4 fw-bold" type="button" data-bs-target="#contactUs" data-bs-toggle="modal">
+              <i class="bi bi-headset"></i>
+              Get in Touch
+              <i class="bi bi-arrow-right ms-2"></i>
+            </button>            
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="project-delivered py-5">
+      <div class="container">
+        <div class="display-6 text-center mb-5 pt-md-5 fw-bold">Projects Delivered</div>
+        <div class="owl-carousel projectCarousel">
+          <div class="item pb-5">
+            <div class="project-item rounded-4 overflow-hidden">
+              <div class="image">
+                  <img src="./dist/images/project-1.jpg"/>
+              </div>
+              <div class="content p-3 text-white">
+                <h3>QuantiPhi,</h3>
+                <div>Mumbai</div>
+                <div>40,000 Sqft</div>
+                <i class="bi bi-plus-lg"></i>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="item pb-5">
+            <div class="project-item rounded-4 overflow-hidden">
+              <div class="image">
+                  <img src="./dist/images/project-2.jpg"/>
+              </div>
+              <div class="content p-3 text-white">
+                <h3>QuantiPhi,</h3>
+                <div>Mumbai</div>
+                <div>40,000 Sqft</div>
+                <a href="javascript:void(0)">
+                  <i class="bi bi-plus-lg"></i>
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="item pb-5">
+            <div class="project-item rounded-4 overflow-hidden">
+              <div class="image">
+                  <img src="./dist/images/project-1.jpg"/>
+              </div>
+              <div class="content p-3 text-white">
+                <h3>QuantiPhi,</h3>
+                <div>Mumbai</div>
+                <div>40,000 Sqft</div>
+                <a href="javascript:void(0)">
+                  <i class="bi bi-plus-lg"></i>
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="item pb-5">
+            <div class="project-item rounded-4 overflow-hidden">
+              <div class="image">
+                  <img src="./dist/images/project-2.jpg"/>
+              </div>
+              <div class="content p-3 text-white">
+                <h3>QuantiPhi,</h3>
+                <div>Mumbai</div>
+                <div>40,000 Sqft</div>
+                <a href="javascript:void(0)">
+                  <i class="bi bi-plus-lg"></i>
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="item pb-5">
+            <div class="project-item rounded-4 overflow-hidden">
+              <div class="image">
+                  <img src="./dist/images/project-1.jpg"/>
+              </div>
+              <div class="content p-3 text-white">
+                <h3>QuantiPhi,</h3>
+                <div>Mumbai</div>
+                <div>40,000 Sqft</div>
+                <a href="javascript:void(0)">
+                  <i class="bi bi-plus-lg"></i>
+                </a>
+
+              </div>
+
+            </div>
+          </div>  
+          <div class="item pb-5">
+            <div class="project-item rounded-4 overflow-hidden">
+              <div class="image">
+                  <img src="./dist/images/project-2.jpg"/>
+              </div>
+              <div class="content p-3 text-white">
+                <h3>QuantiPhi,</h3>
+                <div>Mumbai</div>
+                <div>40,000 Sqft</div>
+                <a href="javascript:void(0)">
+                  <i class="bi bi-plus-lg"></i>
+                </a>
+
+              </div>
+
+            </div>
+          </div>  
+        </div>
+      </div>
+    </section>
+    <section class="py-5 location" style="background-image:url(./dist/images/location-bg.png);background-size:cover;background-position:center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 mb-4">
+            <div class="d-flex justify-content-center align-items-center">
+              <i class="bi bi-geo-alt display-1 text-primary"></i>
+              <div class="display-6 text-center fw-bold">
+                We're present<br/>
+                in the following cities
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 pt-4">
+            <div class="row justify-content-center">
+              <div class="col-sm-6 col-md-3 pb-4">
+                <div class="location-box">
+                  <div class="h2">Hyderabad</div>
+                  <p class="text-muted small">Mytri Square, 2-41/11, 6/2, Gachibowli - Miyapur Rd, Laxmi Cyber City, Prashanth Nagar Colony, Kondapur, Hyderabad, Telangana 500084</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 pb-4">
+                <div class="location-box">
+                  <div class="h2">Hyderabad</div>
+                  <p class="text-muted small">Mytri Square, 2-41/11, 6/2, Gachibowli - Miyapur Rd, Laxmi Cyber City, Prashanth Nagar Colony, Kondapur, Hyderabad, Telangana 500084</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 pb-4">
+                <div class="location-box">
+                  <div class="h2">Hyderabad</div>
+                  <p class="text-muted small">Mytri Square, 2-41/11, 6/2, Gachibowli - Miyapur Rd, Laxmi Cyber City, Prashanth Nagar Colony, Kondapur, Hyderabad, Telangana 500084</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 pb-4">
+                <div class="location-box">
+                  <div class="h2">Hyderabad</div>
+                  <p class="text-muted small">Mytri Square, 2-41/11, 6/2, Gachibowli - Miyapur Rd, Laxmi Cyber City, Prashanth Nagar Colony, Kondapur, Hyderabad, Telangana 500084</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 pb-4">
+                <div class="location-box">
+                  <div class="h2">Hyderabad</div>
+                  <p class="text-muted small">Mytri Square, 2-41/11, 6/2, Gachibowli - Miyapur Rd, Laxmi Cyber City, Prashanth Nagar Colony, Kondapur, Hyderabad, Telangana 500084</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 pb-4">
+                <div class="location-box">
+                  <div class="h2">Hyderabad</div>
+                  <p class="text-muted small">Mytri Square, 2-41/11, 6/2, Gachibowli - Miyapur Rd, Laxmi Cyber City, Prashanth Nagar Colony, Kondapur, Hyderabad, Telangana 500084</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 pb-4">
+                <div class="location-box">
+                  <div class="h2">Hyderabad</div>
+                  <p class="text-muted small">Mytri Square, 2-41/11, 6/2, Gachibowli - Miyapur Rd, Laxmi Cyber City, Prashanth Nagar Colony, Kondapur, Hyderabad, Telangana 500084</p>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3 pb-4">
+                <div class="location-box">
+                  <div class="h2">Hyderabad</div>
+                  <p class="text-muted small">Mytri Square, 2-41/11, 6/2, Gachibowli - Miyapur Rd, Laxmi Cyber City, Prashanth Nagar Colony, Kondapur, Hyderabad, Telangana 500084</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 process">
+      <div class="container-fluid">
+        <div class="display-6 text-center mb-5 fw-bold">Steps For Hasslefree & Convenient Process</div>
+        <div class="owl-carousel stepCarousel owl-theme">
+          <div class="item">
+            <div class="process-step step-dark py-4 px-4 bg-dark text-white text-center">
+              <div class="h1 fw-bold text-uppercase mb-5">STEP 1</div>
+              <div class="icon my-3">
+                <img src="./dist/images/step-1.svg" class="d-inline-block"/>
+              </div>
+              <div class="title mb-2 small fw-bold">Client Discussion Stage</div>
+              <div class="desc small"><span class="small">Layout created basis bare-shell floor plate mapped to client requirements</span> </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="process-step py-4 px-4 text-center ">
+              <div class="h1 fw-bold text-uppercase mb-5">STEP 2</div>
+              <div class="icon my-3">
+                <img src="./dist/images/step-2.svg" class="d-inline-block"/>
+              </div>
+              <div class="title mb-2 small fw-bold">Space Planning Stage</div>
+              <div class="desc small">
+                <span class="small">
+                  Allows converting 2-D layouts 
+                  <div>to basic 3-D walkthrough</div>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="process-step py-4 px-4 text-center ">
+              <div class="h1 fw-bold text-uppercase mb-5">STEP 3</div>
+              <div class="icon my-3">
+                <img src="./dist/images/step-3.svg" class="d-inline-block"/>
+              </div>
+              <div class="title mb-2 small fw-bold">Product Selection Stage</div>
+              <div class="desc small">
+                <span class="small">
+                  Choose from a one stop portal for 
+                  <div>curated commercial interior design</div>
+                  <div>products and finishes - 2,00,000+ SKUs</div>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="process-step py-4 px-4 text-center ">
+              <div class="h1 fw-bold text-uppercase mb-5">STEP 4</div>
+              <div class="icon my-3">
+                <img src="./dist/images/step-4.svg" class="d-inline-block"/>
+              </div>
+              <div class="title mb-2 small fw-bold">3D Visualisation Stage</div>
+              <div class="desc small">
+                <span class="small">
+                  Photorealistic 3D walkthrought/video. 
+                  <div>Real time changeable through</div>
+                  <div>market available products</div>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="process-step py-4 px-4 text-center ">
+              <div class="h1 fw-bold text-uppercase mb-5">STEP 5</div>
+              <div class="icon my-3">
+                <img src="./dist/images/step-5.svg" class="d-inline-block"/>
+              </div>
+              <div class="title mb-2 small fw-bold">Execution Stage</div>
+              <div class="desc small">
+                <span class="small">
+                  A one stop dashboard 
+                  <div>to track progress of your</div>
+                  <div>commercial space</div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 testimonial" style="background-image:url('./dist/images/testimonial-bg.png')">
+      <div class="container">
+        <div class="display-6 text-center mb-5 fw-bold">Testimonials</div>
+        <div class="owl-carousel owl-theme testimonial-carousel">
+          <div class="item">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="row align-items-center">
+                  <div class="col-md-6 order-md-2">
+                    <img src="./dist/images/Regus.jpg"/>
+                  </div>
+                  <div class="col-md-6 order-md-1">
+                    <div class="content bg-white p-4">
+                      <div class="header mb-4">
+                        <h4 class="h2">Pankaj Tripathi,</h4>
+                        <p class="small">General Manager, Commercial & Administration, BSH</p>
+                      </div>
+                      <div class="desc">
+                        <p class="small">Flipspaces designed four of our offices Mumbai, Hyderabad, Chennai and Bangalore. All the three offices are beautifully made with open space seating arrangement, giving a perception of bigger space, something we tried for the first time. There is an ample amount of natural light that flows in and the designs made it look like a new generation office. It is full of youthfulness and gives out positive vibes to the employees.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="row align-items-center">
+                  <div class="col-md-6 order-md-2">
+                    <img src="./dist/images/Regus.jpg"/>
+                  </div>
+                  <div class="col-md-6 order-md-1">
+                    <div class="content bg-white p-4">
+                      <div class="header mb-4">
+                        <h4 class="h2">Pankaj Tripathi,</h4>
+                        <p class="small">General Manager, Commercial & Administration, BSH</p>
+                      </div>
+                      <div class="desc">
+                        <p class="small">Flipspaces designed four of our offices Mumbai, Hyderabad, Chennai and Bangalore. All the three offices are beautifully made with open space seating arrangement, giving a perception of bigger space, something we tried for the first time. There is an ample amount of natural light that flows in and the designs made it look like a new generation office. It is full of youthfulness and gives out positive vibes to the employees.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="row align-items-center">
+                  <div class="col-md-6 order-md-2">
+                    <img src="./dist/images/Regus.jpg"/>
+                  </div>
+                  <div class="col-md-6 order-md-1">
+                    <div class="content bg-white p-4">
+                      <div class="header mb-4">
+                        <h4 class="h2">Pankaj Tripathi,</h4>
+                        <p class="small">General Manager, Commercial & Administration, BSH</p>
+                      </div>
+                      <div class="desc">
+                        <p class="small">Flipspaces designed four of our offices Mumbai, Hyderabad, Chennai and Bangalore. All the three offices are beautifully made with open space seating arrangement, giving a perception of bigger space, something we tried for the first time. There is an ample amount of natural light that flows in and the designs made it look like a new generation office. It is full of youthfulness and gives out positive vibes to the employees.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container">
+        <div class="display-6 text-center mb-5 fw-bold">Awards & Recognitions</div>
+        <div class="owl-carousel owl-theme award-carousel">
+          <!-- Award Item -->
+          <div class="item">
+            <div class="award-item border border-primary p-3 text-center rounded">
+              <div class="image mb-3 text-center">
+                <img src="./dist/images/01.svg" width="100" class="d-inline-block"/>
+              </div>
+              <div class="content small">
+                <div class="first mb-3">
+                  "MOST FUTURISTIC &amp; TRUSTED <strong>INTERIOR DESIGN</strong> FIRM OF THE YEAR 2022"
+                </div>
+                <div class="second">
+                  National architecture &amp; interior design excellence awards
+                </div>
+                <div class="text-primary my-2">&mdash;</div>
+                <strong>2021</strong>
+              </div>
+            </div>
+          </div>
+          <!-- /Award Item -->
+        </div>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container">
+        <div class="display-6 text-center mb-5 fw-bold">Frequently Asked Questions</div>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <i class="bi bi-question-square me-2"></i> How long will the design take?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                The timeline of our design process varies depending on the scope of work and size of space to be designed. There are multiple factors attached to the delivery of the project along with the number of iterations. Following our initial consultation, we will provide you the projected scope of work and a rough estimate of cost and timeline required for the project. We are known in the industry for delivering our design projects on time.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <i class="bi bi-question-square me-2"></i> How long will the design take?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                The timeline of our design process varies depending on the scope of work and size of space to be designed. There are multiple factors attached to the delivery of the project along with the number of iterations. Following our initial consultation, we will provide you the projected scope of work and a rough estimate of cost and timeline required for the project. We are known in the industry for delivering our design projects on time.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <i class="bi bi-question-square me-2"></i> How long will the design take?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                The timeline of our design process varies depending on the scope of work and size of space to be designed. There are multiple factors attached to the delivery of the project along with the number of iterations. Following our initial consultation, we will provide you the projected scope of work and a rough estimate of cost and timeline required for the project. We are known in the industry for delivering our design projects on time.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-dark text-white small">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 order-sm-2 py-3 text-center text-sm-end">
+                    
+                </div>
+                <div class="col-sm-6 order-sm-1 py-3 text-center text-sm-start fw-medium">
+                    Copyright © 2024
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="contactUs" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Contact Us</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="dist/js/jquery.min.js"></script>
+    <script src="dist/js/owl.carousel.min.js"></script>
+    <script >
+      $('.testimonial-carousel').owlCarousel({
+          loop:false,
+          margin:30,
+          responsiveClass:true,
+          responsive:{
+              0:{
+                  items:1,
+                  nav:false,
+                  dots:true,
+              },
+              600:{
+                  items:1,
+                  nav:false,
+                  dots:true,
+              },
+              1000:{
+                  items:1,
+                  nav:false,
+                  dots:true,
+              }
+          }
+      });
+      $('.whyUsCarousel').owlCarousel({
+          loop:false,
+          margin:30,
+          responsiveClass:true,
+          nav:false,
+          responsive:{
+              0:{
+                  items:1,
+                  dots:true,
+              },
+              600:{
+                  items:1,
+                  dots:true,
+              },
+              1000:{
+                  items:1,
+                  dots:true,
+              }
+          }
+      });
+      $('.award-carousel').owlCarousel({
+          loop:true,
+          margin:30,
+          nav:true,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:3
+              },
+              1000:{
+                  items:5
+              }
+          }
+      });
+      $('.stepCarousel,.projectCarousel').owlCarousel({
+          loop:false,
+          margin:10,
+          dots:true,
+          nav:false,
+          responsive:{
+              0:{
+                  items:1,
+                  dots:true,
+              },
+              600:{
+                  items:3,
+                  dots:true,
+              },
+              1000:{
+                  items:5,
+                  dots:true,
+              }
+          }
+      });
+      /*
+      $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        //>=, not <=
+        if (scroll >= 300) {
+            //clearHeader, not clearheader - caps H
+            $("header nav").addClass("nav-light");
+            $("header nav").removeClass("nav-dark");
+        }else{
+          $("header nav").addClass("nav-dark");
+          $("header nav").removeClass("nav-light");
+        }
+      });
+      */
+    </script>
+  </body>
+</html>
