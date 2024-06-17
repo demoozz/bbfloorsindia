@@ -54,7 +54,7 @@ async function sendMessage(element,formData,parent){
     submit.innerHTML = 'Send';
     
     parent.querySelectorAll('.response').forEach(function(e){
-        if(response == 1 || response == "1"){
+        if(response){
             e.innerHTML = '<div class="alert alert-success small mt-3">Thank you! Your message has been sent.</div>'
         }else{
             e.innerHTML = '<div class="alert alert-danger small mt-3">There was error in sending your message, Please try again later</div>'
